@@ -15,35 +15,43 @@
 </head>
 
 <body>
-  <div id="menu">
-    <div class="">
-      <input type="submit" id="undo" name="undo" value="Undo">
-      <button type="button" name="1">1</button>
-      <button type="button" name="2">2</button>
-      <button type="button" name="3">3</button>
-      <button type="button" name="4">4</button>
-      <button type="button" name="5">5</button>
-      <button type="button" name="6">6</button>
-
-      <input type="submit" id="create" name="create" value="Create">
-      <input type="submit" id="solve" name="solve" value="Solve">
-      <input type="submit" id="clear" name="clear" value="Clear">
-    </div>
+  <main class="content">
     <canvas id="canvas"></canvas>
-    <div class="">
-      <p id="solNum"></p>
-      <input type="submit" id="previous" name="previous" value="Previous">
-      <input type="submit" id="next" name="next" value="Next">
-    </div>
-
-  </div>
-  <div id="puzzle">
-
-  </div>
-  <div id="solution">
-    <p id="numSol"></p>
-  </div>
-
+    <section class="wrapper">
+      <div class="info">
+        <h1 class="title">Final Fantasy XIII-2 Clock Puzzle Solver</h1>
+        <h4>Objective:</h4>
+        <p>The goal of the puzzle is to travel from circle to circle around the clock while only landing on each circle
+          exactly once. You can start the puzzle from any circle on the clock face. The number that is inscribed on the
+          current circle describes the number of moves in the CW or CCW direction to the next circle that you can move
+          to. If there are no more circles you can legally travel to and the puzzle is still not solved then you need to
+          start over.</p>
+        <h4>Directions:</h4>
+        <p>Insert the numbers clockwise from the 12 o'Clock position for the puzzle you are trying to solve. Once all
+          numbers have been entered, press the 'Solve' button to display the solutions to that puzzle.</p>
+      </div>
+      <div class="options">
+        <div class="controls">
+          <input class="btn create" type="submit" id="create" name="create" value="Create">
+          <input class="btn undo" type="submit" id="undo" name="undo" value="Undo">
+          <button class="btn" type="button" name="1">1</button>
+          <button class="btn" type="button" name="2">2</button>
+          <button class="btn" type="button" name="3">3</button>
+          <button class="btn" type="button" name="4">4</button>
+          <button class="btn" type="button" name="5">5</button>
+          <button class="btn" type="button" name="6">6</button>
+          <input class="btn solve" type="submit" id="solve" name="solve" value="Solve">
+          <input class="btn clear" type="submit" id="clear" name="clear" value="Clear">
+        </div>
+        <div class="solutions">
+          <h4 id="solNum"></h4>
+          <input class="btn" type="submit" id="previous" name="previous" value="Previous">
+          <input class="btn" type="submit" id="next" name="next" value="Next">
+        </div>
+        <div id="error"></div>
+      </div>
+    </section>
+  </main>
 </body>
 
 </html>
